@@ -17,7 +17,6 @@ function hexBetween(start='',end=''){
 
         start=parseInt(start,16)
         end=parseInt(end,16)
-        console.log(start + " " + end)
         var max=0;
         var min=0;
 
@@ -36,9 +35,7 @@ function hexBetween(start='',end=''){
 
         }
         return hex
-
     }
-
 
     function validHex(char){
         return /^[0-9a-fA-F]$/.test(char);
