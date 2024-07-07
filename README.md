@@ -1,6 +1,6 @@
 ﻿# hash-key
 
-hash-key is an npm package that can generate 16-character hexadecimal string, useful for API keys, Passewords, IDs and many more. The package offers two, main functions: generate() and hexBetween(start, end).
+hash-key is an npm package that can generate a 16-character hexadecimal string, useful for API keys, Passwords, IDs, and many more. The package offers two, main functions: generate() and hexBetween(start, end).
 
 ## Installation
 
@@ -14,7 +14,7 @@ npm install hash-key
 
 ## Importing the Package
 
-First, import package into your project:
+First, import the package into your project:
 
 ```js
 const hexGen=require('hash-key')
@@ -45,7 +45,7 @@ The hexBetween(start, end) function generates a 16-character hexadecimal string 
 
 **Example**
 
-Generate String between two hexadecimal value:
+Generate String between two hexadecimal values:
 
 ```js
 const apiKey=hexGen.hexBetween('3', 'f')
@@ -56,7 +56,7 @@ console.log(apiKey) //Example output : 564b6ac6684b58d5
 
 If you'd like to contribute to this project, please open an issue or submit a pull request. Contributions are welcome!
 
-## Future Funtionality
+## Future Functionality
 
 N.B. I will add more functionality in later versions
 
