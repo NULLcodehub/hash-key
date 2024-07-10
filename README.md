@@ -1,6 +1,6 @@
 ﻿# hash-key
 
-hash-key is an npm package that can generate a 16-character hexadecimal string, useful for API keys, Passwords, IDs, and many more. The package offers two, main functions: generate() and hexBetween(start, end).
+hash-key is an npm package that can generate a 16-character hexadecimal string, useful for API keys, Passwords, IDs, and many more. The package offers four, main functions: generate() , hexBetween(start, end), dataChiper(data,salt) and compareHash(data,hash,salt).
 
 ## Installation
 
@@ -51,6 +51,38 @@ Generate String between two hexadecimal values:
 const apiKey=hexGen.hexBetween('3', 'f')
 console.log(apiKey) //Example output : 564b6ac6684b58d5 
 ```
+
+## dataChiper(data,key)
+
+The dataChiper(data,key) funtion transform data or massage into hash string. For hashing it use **Secure Hashing Algorithm (SAH-2)**. As parameters it need to pass data and key. Key could be any srting.
+
+**Example**
+
+Let's convert a string into hash:
+
+```js
+const hashData=hexGen.dataChiper('hello-world','ahnyritokjc');
+console.log(hashData) //Example "b40440103f22529a690e4fd0a295bec16fe29610e31663a4288727e469f06de2"
+```
+## compareHash(data,hash,key)
+
+The compareHash(data,hash,key) this function used to compare given piece of data with a provided hash value,using a specified salt. If hash belongs to the data ,funtion return **true** , otherwise it return **false**
+
+**Example**
+
+Let's compare a string with a hash value:
+
+```js
+// string: hello-world
+//salt: ahnyritokjc
+//hash for the string : b40440103f22529a690e4fd0a295bec16fe29610e31663a4288727e469f06de2
+
+const hash='b40440103f22529a690e4fd0a295bec16fe29610e31663a4288727e469f06de2'
+const hashMatched=hexGen.compareHash('hello-world','ahnyritokjc');
+console.log(hashMatched) // output: ture
+```
+
+
 
 # Contributing
 

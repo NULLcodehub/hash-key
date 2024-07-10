@@ -1,3 +1,4 @@
+const crypto=require('node:crypto')
 
 //generate 16 character random number
 function generate(size=16){
@@ -43,7 +44,39 @@ function hexBetween(start='',end=''){
 
 }
 
+
+var hash=''
+const pacSceret='lseommvsldkmsmdmsdmpwm-e34887983wflksnldnwken-73437y49389wnfl-sndlnwl'
+
+const dataChiper=(data='',salt)=>{
+
+    try {
+        const key=pacSceret+salt
+        hash=crypto.createHmac('sha256',key).update(data).digest('hex')
+
+        return hash
+    } catch (error) {
+        throw new error(error)
+    }
+    
+
+}
+
+const compareHash=(data,hash,salt)=>{
+
+    const key=pacSceret+salt
+    dataHash=crypto.createHmac('sha256',key).update(data).digest('hex')
+    return hash === dataHash
+
+}
+
+
+
 module.exports={
     generate,
-    hexBetween
+    hexBetween,
+    dataChiper,
+    compareHash
 }
+
+
