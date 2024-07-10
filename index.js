@@ -48,7 +48,7 @@ function hexBetween(start='',end=''){
 var hash=''
 const pacSceret='lseommvsldkmsmdmsdmpwm-e34887983wflksnldnwken-73437y49389wnfl-sndlnwl'
 
-const dataChiper=(data='',salt)=>{
+const dataCipher=(data='',salt)=>{
 
     try {
         const key=pacSceret+salt

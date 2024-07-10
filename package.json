@@ -1,6 +1,6 @@
 {
   "name": "hash-key",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "with this package user can genarate random long or short hexadecimal number which can be used as api key,password,id and many more ",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,12 @@
   },
   "keywords": [
     "hash",
-    "key"
+    "key",
+    "password",
+    "api",
+    "hash-key",
+    "encoding",
+    "cryptography"
   ],
   "author": "Sourav Saha",
   "license": "ISC",
