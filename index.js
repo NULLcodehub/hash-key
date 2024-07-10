@@ -75,7 +75,7 @@ const compareHash=(data,hash,salt)=>{
 module.exports={
     generate,
     hexBetween,
-    dataChiper,
+    dataCipher,
     compareHash
 }
 
