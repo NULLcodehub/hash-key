@@ -78,7 +78,7 @@ Let's compare a string with a hash value:
 //hash for the string : 'b40440103f22529a690e4fd0a295bec16fe29610e31663a4288727e469f06de2'
 
 const hash='b40440103f22529a690e4fd0a295bec16fe29610e31663a4288727e469f06de2'
-const hashMatched=hexGen.compareHash('hello-world','ahnyritokjc');
+const hashMatched=hexGen.compareHash('hello-world',hash,'ahnyritokjc');
 console.log(hashMatched) // output: ture
 ```
 
