@@ -91,7 +91,7 @@ The **dataCipher** function can be used to transform passwords into hashed value
 
 If you'd like to contribute to this project, please open an issue or submit a pull request. Contributions are welcome!
 
-## Future Functionality
+# Future Functionality
 
 N.B. I will add more functionality in later versions
 
